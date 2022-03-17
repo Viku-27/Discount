@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<cs50.h>
+
+float discount(float price,int percentage);
+int main(void)
+{
+    float rx = get_float("What is retail price?");
+    int percent_off = get_int("What percentage off ?");
+    float sale = discount(rx,percent_off);
+    printf("sale price is %.2f\n", sale);
+}
+
+float discount(float price,int percentage)
+{
+    return price*(100-percentage )/100;
+}
